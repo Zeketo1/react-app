@@ -1,0 +1,31 @@
+.navbar-conatainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    background: rgb(229, 226, 226);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.navbar-ul {
+    padding: 10px;
+    column-gap: 10px;
+}
+
+.navbar-conatainer ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.link {
+    text-decoration: none;
+    border: none;
+    font-size: 21px;
+    color: #000;
+}

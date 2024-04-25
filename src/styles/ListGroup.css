@@ -1,0 +1,20 @@
+.listgroup-container {
+    margin: 1rem 2rem;
+}
+
+.list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.list li {
+    margin: 2rem 0;
+    padding: 1rem 0.5rem;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.active {
+    background: gray;
+}
