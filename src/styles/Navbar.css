@@ -2,24 +2,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5px;
-    background: rgb(229, 226, 226);
+    padding: 10px 15px;
+    color: white;
+    background: #0d1117;
 }
 
 .logo {
-    font-size: 27px;
+    font-size: 30px;
     font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
 }
 
 .navbar-ul {
     padding: 10px;
     column-gap: 10px;
+    width: 60%;
 }
 
 .navbar-conatainer ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border: none;
 }
 
@@ -27,5 +31,9 @@
     text-decoration: none;
     border: none;
     font-size: 21px;
-    color: #000;
+    color: white;
+}
+
+.link:hover {
+    color: aqua;
 }

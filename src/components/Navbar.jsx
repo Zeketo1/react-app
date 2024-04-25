@@ -28,7 +28,7 @@ const Navbar = () => {
 
                 <li>
                     <Link to="/dashboard" className="link">
-                        DashBoard
+                        Dashboard
                     </Link>
                 </li>
 
@@ -38,6 +38,7 @@ const Navbar = () => {
                     </Link>
                 </li>
             </ul>
+            <img src="vite.svg" alt="logo" height={40} className="vite" />
         </div>
     );
 };
