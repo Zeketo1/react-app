@@ -37,6 +37,11 @@ const Navbar = () => {
                         Login
                     </Link>
                 </li>
+                <li>
+                    <Link to="/register" className="link">
+                        Sign Up
+                    </Link>
+                </li>
             </ul>
             <img src="vite.svg" alt="logo" height={40} className="vite" />
         </div>

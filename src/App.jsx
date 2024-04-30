@@ -9,6 +9,7 @@ import NotFound from "./components/NotFound";
 import Playground from "./components/Playground";
 import { students } from "./data";
 import PrivateRoute from "./routes/PrivateRoute";
+import Registration from "./components/Registration";
 
 function App() {
     return (
@@ -23,9 +24,12 @@ function App() {
                 <Route path="/students/:id" element={<StudentData />} />
                 <Route path="/playground" element={<Playground />} />
                 <Route path="/Login" element={<Login />} />
+                <Route path="/register" element={<Registration />} />
+
                 <Route path="/dashboard" element={<PrivateRoute />}>
                     <Route index element={<Dashboard />} />
                 </Route>
+
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>

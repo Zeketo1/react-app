@@ -3,20 +3,19 @@ import "../styles/Login.css";
 
 const Login = () => {
     const age = useRef(null);
-    const firstname = useRef(null);
-    const lastname = useRef(null);
+    const email = useRef(null);
+    const password = useRef(null);
 
     const [user2, setUser2] = useState({
-        firstName: "",
-        lastName: "",
-        age: 0,
+        email: "",
+        password: "",
     });
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // const user = {
-        //     firstname: firstname?.current.value,
-        //     lastname: lastname?.current.value,
+        //     email: email?.current.value,
+        //     password: password?.current.value,
         //     age: age?.current.value,
         // };
         console.log(user2);
@@ -26,39 +25,26 @@ const Login = () => {
         <div className="form-container">
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="firstname">First-Name</label>
+                    <label htmlFor="email">E-mail</label>
                     <input
                         type="text"
-                        id="firstname"
+                        id="email"
                         onChange={(event) =>
                             setUser2({
                                 ...user2,
-                                firstName: event.target.value,
+                                email: event.target.value,
                             })
                         }
                     />
                 </div>
 
-                <br />
                 <div>
-                    <label htmlFor="lastname">Last-Name</label>
+                    <label htmlFor="password">Password</label>
                     <input
                         type="text"
-                        id="lastname"
+                        id="password"
                         onChange={(event) =>
-                            setUser2({ ...user2, lastName: event.target.value })
-                        }
-                    />
-                </div>
-
-                <br />
-                <div>
-                    <label htmlFor="age">Age</label>
-                    <input
-                        type="text"
-                        id="age"
-                        onChange={(event) =>
-                            setUser2({ ...user2, age: event.target.value })
+                            setUser2({ ...user2, password: event.target.value })
                         }
                     />
                 </div>

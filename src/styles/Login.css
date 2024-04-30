@@ -6,16 +6,14 @@
 }
 
 form {
-    position: relative;
-    width: 400px;
-    background: rgb((236), 231, 231);
-    height: 45vh;
     width: 45vw;
+    background: rgb(224, 205, 205);
+    min-height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 2rem;
     border-radius: 12px;
 }
 
@@ -25,7 +23,7 @@ input {
     margin-left: 0.5rem;
 }
 
-form > div {
+form > div > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,10 +35,25 @@ form > div:nth-child(5) {
 }
 
 form > button {
-    position: absolute;
+    background-color: #0d1117;
+    border: 0;
+    color: white;
     width: fit-content;
     padding: 10px 30px;
     border-radius: 50px;
     right: 30px;
+    cursor: pointer;
     bottom: 0;
+    transition: all 0.3s;
+}
+
+form > button:hover {
+    opacity: 0.9;
+}
+
+small {
+    display: block;
+    text-align: center;
+    color: red;
+    margin-top: 0.5rem;
 }
