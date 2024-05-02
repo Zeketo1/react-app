@@ -33,6 +33,12 @@ const Navbar = () => {
                 </li>
 
                 <li>
+                    <Link to="/users" className="link">
+                        Users
+                    </Link>
+                </li>
+
+                <li>
                     <Link to="/login" className="link">
                         Login
                     </Link>
