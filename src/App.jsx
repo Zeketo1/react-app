@@ -11,6 +11,7 @@ import { students } from "./data";
 import PrivateRoute from "./routes/PrivateRoute";
 import Registration from "./components/Registration";
 import Users from "./components/Users";
+import Post from "./components/Post";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/Login" element={<Login />} />
                 <Route path="/register" element={<Registration />} />
                 <Route path="/users" element={<Users />} />
+                <Route path="/post" element={<Post />} />
 
                 <Route path="/dashboard" element={<PrivateRoute />}>
                     <Route index element={<Dashboard />} />

@@ -34,9 +34,10 @@ const Users = () => {
         const newUsers = users.filter((userN) => userN.id != user.id);
         setUsers(newUsers);
         // --Deleting data.........currenting not working for an unknown reason
-        // axios
-        //     .delete(`https://jsonplaceholder.typicode.com/users/${user.id}`)
-        //     .catch((err) => console.log(err.message));
+        axios
+            .delete(`https://jsonplaceholder.typicode.com/users/${user.id}`)
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err.message));
     };
 
     const handleNewUser = () => {
@@ -48,16 +49,42 @@ const Users = () => {
         };
 
         axios
-            .post("https://jsonplaceholder.typicode.com/users", {
-                data: newUser,
-            })
-            .then((res) => setUsers([newUser, ...users]));
+            .post("https://jsonplaceholder.typicode.com/users", newUser)
+            .then((res) => {
+                console.log(res.data);
+                setUsers([newUser, ...users]);
+            });
+    };
+
+    const handleUpdate = (user) => {
+        const newUser = { ...user, name: "Luz Zeketo" };
+        const updatedUsers = users.map((newUser) => {
+            if (newUser.id == user.id) {
+                console.log(newUser);
+                return { ...newUser, name: "Donald Wills" };
+            } else {
+                return newUser;
+            }
+        });
+
+        setUsers(updatedUsers);
+
+        const newUserData = { ...user, name: "Donald Wills" };
+
+        axios
+            .patch(
+                `https://jsonplaceholder.typicode.com/users/${user.id}`,
+                newUserData
+            )
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err.message));
     };
 
     return (
         <>
             {error && <p>{error}</p>}
             {isLoading && <p>Loading...</p>}
+            <button onClick={handleNewUser}>Add user</button>
             {users.length > 0 && (
                 <table cellSpacing={0}>
                     <thead>
@@ -81,6 +108,14 @@ const Users = () => {
                                         onClick={() => handleDelete(user)}
                                     >
                                         Delete
+                                    </button>
+                                </td>
+                                <td>
+                                    <button
+                                        className="update-btn"
+                                        onClick={() => handleUpdate(user)}
+                                    >
+                                        Update
                                     </button>
                                 </td>
                             </tr>
